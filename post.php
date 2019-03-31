@@ -14,6 +14,10 @@ mail($TO, $subject, $content, $h);
 }	
 else
 {
+	echo '<label class="error" id="name_error">Para1: $TO</label><br>';
+	echo '<label class="error" id="name_error">Para2: ' . $TO . '</label><br>';
+	echo '<label class="error" id="name_error">De: $h</label><br>';
+	echo '<label class="error" id="name_error">content: $content</label><br>';
 	echo 0; // invalid code
 }
 ?>

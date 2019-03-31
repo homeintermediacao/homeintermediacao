@@ -50,7 +50,7 @@ $(document).ready(function() {
 			var nameVal = $("#name").val();
 			if(nameVal == '') {
 				$("#name_error").html('');
-				$("#name").after('<label class="error" id="name_error">Please enter your name.</label>');
+				$("#name").after('<label class="error" id="name_error">Por favor, preencha seu nome.</label>');
 				return false
 			}
 			else
@@ -62,12 +62,12 @@ $(document).ready(function() {
 			var emailaddressVal = $("#email").val();
 			if(emailaddressVal == '') {
 				$("#email_error").html('');
-				$("#email").after('<label class="error" id="email_error">Please enter your email address.</label>');
+				$("#email").after('<label class="error" id="email_error">Por favor, preencha seu e-mail.</label>');
 				return false
 			}
 			else if(!emailReg.test(emailaddressVal)) {
 				$("#email_error").html('');
-				$("#email").after('<label class="error" id="email_error">Enter a valid email address.</label>');
+				$("#email").after('<label class="error" id="email_error">Informe um e-mail valido.</label>');
 				return false
 			}
 			else
@@ -78,7 +78,7 @@ $(document).ready(function() {
 			var nameVal = $("#message").val();
 			if(nameVal == '') {
 				$("#message_error").html('');
-				$("#message").after('<label class="error" id="name_error">Please enter your message.</label>');
+				$("#message").after('<label class="error" id="name_error">Por favor, digite uma mensagem.</label>');
 				return false
 			}
 			else
@@ -90,14 +90,14 @@ $(document).ready(function() {
 			if(response==1)
 			{
 				$("#after_submit").html('');
-				$("#Send").after('<br/><BR/><div class="alert alert-success success" id="after_submit"><button type="button" class="close" data-dismiss="alert">x</button>Thank you! Your message has been sent.</div>');
+				$("#Send").after('<br/><BR/><div class="alert alert-success success" id="after_submit"><button type="button" class="close" data-dismiss="alert">x</button>Obrigado! Sua mensagem será recepcionada em breve.</div>');
 				change_captcha();
 				clear_form();
 			}
 			else
 			{
 				$("#after_submit").html('');
-				$("#Send").after('<label class="error" id="after_submit">Wrong captcha! Refresh and try again.</label>');
+				$("#Send").after('<label class="error" id="after_submit">Captcha não confere. Por favor, digite novamente.</label>');
 			}
 		});
 		return false;
