@@ -6,7 +6,7 @@ $message = $_GET['message'];
 $subject = '[Mensagem do site], de ' . $name;
 if(strtolower($_REQUEST['code']) == strtolower($_SESSION['random_number']))
 {
-$TO = "bmgmadruga@hotmail.com";
+$TO = "contato@homeintermediacao.com.br";
 $h = "From: " . $email;
 $content = "$name ($email) enviou uma nova mensagem :\n\n$message";
 mail($TO, $subject, $content, $h);		
