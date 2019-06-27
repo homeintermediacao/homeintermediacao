@@ -7,9 +7,9 @@ $subject = '[Mensagem do site], de ' . $name;
 if(strtolower($_REQUEST['code']) == strtolower($_SESSION['random_number']))
 {
 	$TO = "contato@homeintermediacao.com.br";
-	$h = "From: " . $email;
+	$From = "From: " . $email;
 	$content = "$name ($email) enviou uma nova mensagem :\n\n$message";
-	mail($TO, $subject, $content, "From: email@email.com");
+	mail($TO, $subject, $content, $From);
 	//mail($TO, $subject, $content, $h);
 	echo 1;		
 }	
