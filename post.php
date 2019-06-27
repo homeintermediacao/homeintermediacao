@@ -10,7 +10,7 @@ if(strtolower($_REQUEST['code']) == strtolower($_SESSION['random_number']))
 	$From = "From: site@homeintermediacao.com.br";
 	$content = "$name ($email) enviou uma nova mensagem :\n\n$message";
 	mail($TO, $subject, $content, $From);
-	//mail($TO, $subject, $content, $h);
+
 	echo 1;		
 }	
 else
