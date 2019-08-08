@@ -4,16 +4,16 @@
 class Config_BD
 {
     //Produção
-    //public $usrBanco = 'home';
-    //public $pwsBanco = 'mida@1985';
-    //public $nomeBanco = 'dbhome';
-    //public $serverBanco = 'dbhome.mysql.uhserver.com';
+    public $usrBanco = 'home';
+    public $pwsBanco = 'mida@1985';
+    public $nomeBanco = 'dbhome';
+    public $serverBanco = 'dbhome.mysql.uhserver.com';
 
     //Desenvolvimento
-    public $serverBanco = "localhost";
-    public $nomeBanco = "homeDB";
-    public $usrBanco = "root";
-    public $pwsBanco = "";
+    //public $serverBanco = "localhost";
+    //public $nomeBanco = "homeDB";
+    //public $usrBanco = "root";
+    //public $pwsBanco = "";
 
 }
 
