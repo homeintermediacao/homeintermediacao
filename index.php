@@ -8,6 +8,7 @@
 <meta name="description" content="Home intermediacao">
 <meta name="author" content="Home Intermediacao">
 <!-- Le styles -->
+<link rel="stylesheet" href="assets/css/estilo_noticia.css" />
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href="assets/css/style.css" rel="stylesheet">
@@ -55,10 +56,11 @@ experience.
 			<li class="active"><a class="sscroll" href="#top-section">Inicio</a></li>
 			<li><a class="sscroll" href="#Section-1">Quem somos</a></li>
 			<li><a class="sscroll" href="#Section-2">Valores</a></li>
-			<li><a class="sscroll" href="#Section-5">Serviços</a></li>
-			<li><a class="sscroll" href="https://facebook.com/" target="_blanck">Facebook</a></li>
+			<li><a class="sscroll" href="#Section-3">Serviços</a></li>
+			<!--<li><a class="sscroll" href="#Section-4">Noticias</a></li>-->
 			<li><a class="sscroll" href="https://instagram.com/homeintermediacao" target="_blanck">Instagram</a></li>
-			<li><a class="sscroll" href="#Section-6">Contate-nos</a></li>
+			<li><a class="sscroll" href="#Section-5">Contate-nos</a></li>
+			<li><a class="sscroll" href="adm/Logon/logon.php">Login</a></li>
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->
@@ -143,8 +145,8 @@ experience.
 			<i class="fas fa-shipping-fast"></i>
 			<h3>Agilidade</h3>
 			<p>
-				O tempo é valioso e damos importancia a isto. <br>
-				Buscamos realizar nosso trabalho de forma agil, sem comprometer a qualidade.<br><br>
+				O tempo é valioso e damos importância a isto. <br>
+				Buscamos realizar nosso trabalho de forma ágil, sem comprometer a qualidade.<br><br>
 			</p>
 		</div>
 		<div class="boxservice rightb">
@@ -160,7 +162,7 @@ experience.
 			<h3>Ética</h3>
 			<p>
 				Buscamos um equilíbrio e bom funcionamento profissional e social.<br>
-				Seguimos os valores morais e os principios da boa conduta no relacionamento o cliente.<br>
+				Seguimos os valores morais e os princípios da boa conduta no relacionamento o cliente.<br>
 			</p>
 		</div>
 		<div class="boxservice bottomb">
@@ -175,7 +177,7 @@ experience.
 			<h3>Excelência</h3>
 			<p>
 				Buscamos diariamente melhorar nossa excelência no trabalho.<br>
-				A excelência não é um feito e sim um habito.<br><br>
+				A excelência não é um feito e sim um hábito.<br><br>
 			</p>
 		</div>
 	</div>
@@ -336,8 +338,8 @@ experience.
 </div>
 </div>
 </section>
-<!-- SECTION-5 (pricing) -->
-<section id="Section-5" class="fullbg color-white">
+<!-- SECTION-3 -->
+<section id="Section-3" class="fullbg color-white">
 <div class="section-divider">
 </div>
 <div class="container">
@@ -398,8 +400,61 @@ experience.
 </div>
 </div>
 </section>
-<!-- SECTION-6 (contact) -->
-<section id="Section-6" class="fullbg">
+<!-- SECTION-4 -->
+<!-- <section id="Section-4" class="fullbg color-white">
+	<div class="section-divider">
+	</div>
+	<div class="container">
+	<div class="row">
+		<div class="page-header text-center col-sm-12 col-lg-12 color-white animated fade">
+			<h1>Notícias</h1>
+			<p class="lead">
+				Aqui você se mantem atualizado quanto ao mercado imobiliário.
+			</p>
+		</div>
+	</div>
+	<div class="row color-white">
+		<div class="col-md-12 animated fadeInUpNow">
+			<?php
+				require_once("adm/noticias/classes/Noticia.php");
+				require_once("config/config.php");
+
+				$Not = new Noticia();
+				$config = new Config_IMG();
+
+				$Noticias = $Not->consultarFeed(3);
+
+				for ($i = (count($Noticias)-1);$i >= 1; $i--)
+				{ 
+					$fonte_url = $Noticias[$i]->getFonte_url();
+
+					if ((strtoupper(substr($fonte_url,0,5)) != "HTTPS") && (strtoupper(substr($fonte_url,0,4)) != "HTTP"))
+					{
+						$fonte_url = "https://".$fonte_url;
+					}
+
+					$Imagem = $config->getCaminhoArq() . $Noticias[$i]->getImagem();
+
+					?>
+					<div class="box_noticia">
+						<table height=150px>
+							<tr><td><img src="<?php echo $Imagem; ?>" title="<?php echo $Noticias[$i]->getFonte_nome(); ?>"></td></tr>
+							<tr><td>
+								<h3><a href="<?php echo $fonte_url; ?>" title="<?php echo $Noticias[$i]->getFonte_nome(); ?>"><?php echo $Noticias[$i]->getTitulo(); ?></a></h3>
+								<p>
+									<?php echo $Noticias[$i]->getResumo(); ?>
+								</p>
+							</td></tr>
+						</table>
+					</div>
+					<?php 
+				}
+			?>
+		</div>
+	</div>
+</section> -->
+<!-- SECTION-5 -->
+<section id="Section-5" class="fullbg">
 <div class="section-divider">
 </div>
 <div class="container">

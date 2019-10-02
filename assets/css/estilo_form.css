@@ -1,0 +1,45 @@
+body{
+    background-color: #111109;
+    color: white;
+}
+
+.divMaster{
+    width: 100%;
+    height: 100%;
+}
+
+.divForm{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 50px;
+}
+
+form{
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.sText{
+    border: 2px solid;
+    border-color: #424224;
+}
+
+.sButton{
+    border: 2px solid;
+    border-color:#424224;
+    font-size: 17px;
+}
+
+.sTable{
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.bdDown{
+    border-bottom: 2px solid;
+    border-color: #424224;
+    padding: 5px;
+}

@@ -120,6 +120,9 @@ header#top-section {
 			margin-top:40px;
 			z-index:2;
 }
+.clsLogo {
+	background-image:url(./assets/img/predio1.jpg)
+}
 section {
 		padding-bottom:100px;
 				min-height:730px;
@@ -137,7 +140,7 @@ section {
 	position:absolute;
 	top:0;
 	left:0;
-	background-image:url(http://unsplash.it/1600/1400?random=1);
+	background-image:url(../img/predio1.jpg);
 	width:100%;
 	height:100%;
 	opacity:0.05;
@@ -156,7 +159,7 @@ section {
 	position:absolute;
 	top:0;
 	left:0;
-	background-image:url(http://unsplash.it/1600/1400?random=2);
+	background-image:url(../img/predio2.jpg);
 	-webkit-background-size:cover !Important;
 	-moz-background-size:cover !Important;
 	-o-background-size:cover !Important;
@@ -174,7 +177,7 @@ section {
 	position:absolute;
 	top:0;
 	left:0;
-	background-image:url(http://unsplash.it/1600/1400?random=3);
+	background-image:url(../img/predio3.jpg);
 	-webkit-background-size:cover !Important;
 	-moz-background-size:cover !Important;
 	-o-background-size:cover !Important;
@@ -193,7 +196,7 @@ section {
 	position:absolute;
 	top:0;
 	left:0;
-	background-image:url(http://unsplash.it/1600/1400?random=4);
+	background-image:url(../img/predio4.jpg);
 	-webkit-background-size:cover !Important;
 	-moz-background-size:cover !Important;
 	-o-background-size:cover !Important;
@@ -211,7 +214,7 @@ section {
 	position:absolute;
 	top:0;
 	left:0;
-	background-image:url(http://unsplash.it/1600/1400?random=5);
+	background-image:url(../img/predio5.jpg);
 	width:100%;
 	height:100%;
 	opacity:0.08;
@@ -229,7 +232,7 @@ section {
 	position:absolute;
 	top:0;
 	left:0;
-	background-image:url(http://unsplash.it/1600/1400?random=6);	 
+	background-image:url(../img/predio6.jpg);	 
 	width:100%;
 	height:100%;
 	opacity:0.04;
