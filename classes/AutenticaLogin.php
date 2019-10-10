@@ -6,7 +6,14 @@ session_start();
 
 if (!$Autenticado)
 {
-        header("Location: /homeintermediacao/adm/Logon/logon.php");
+        if (strtoupper($_SERVER["HTTP_HOST"]) == "LOCALHOST")
+        {
+                header("Location: /homeintermediacao/adm/Logon/logon.php");
+        }
+        else
+        {
+                header("Location: /adm/Logon/logon.php");
+        }
 }
 
 ?>

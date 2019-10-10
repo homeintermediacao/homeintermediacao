@@ -7,9 +7,18 @@
         <div class="divForm">
 <?php
 
-require_once("../../classes/AutenticaLogin.php");
+if (strtoupper($_SERVER["HTTP_HOST"]) == "LOCALHOST")
+{
+    require_once($_SERVER["DOCUMENT_ROOT"]."/homeintermediacao/classes/AutenticaLogin.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/homeintermediacao/config/config.php");
+}
+else
+{
+    require_once($_SERVER["DOCUMENT_ROOT"]."/classes/AutenticaLogin.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/config/config.php");
+}
+
 require_once("classes/Noticia.php");
-require_once("../../config/config.php");
 
 @$Id = $_POST["tId"];
 @$Titulo = $_POST["tTitulo"];

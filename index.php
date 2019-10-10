@@ -416,6 +416,7 @@ experience.
 	<div class="row color-white">
 		<div class="col-md-12 animated fadeInUpNow">
 			<?php
+			
 				require_once("adm/noticias/classes/Noticia.php");
 				require_once("config/config.php");
 

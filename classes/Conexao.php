@@ -1,6 +1,13 @@
 <?php 
 
-include_once($_SERVER["DOCUMENT_ROOT"] . "/homeintermediacao/config/config.php");
+if (strtoupper($_SERVER["HTTP_HOST"]) == "LOCALHOST")
+{
+    include_once($_SERVER["DOCUMENT_ROOT"] . "/homeintermediacao/config/config.php");
+}
+else
+{
+    include_once($_SERVER["DOCUMENT_ROOT"] . "/config/config.php");
+}
 
 class Conexao
 {
